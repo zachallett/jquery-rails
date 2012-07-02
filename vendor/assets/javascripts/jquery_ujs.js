@@ -178,6 +178,13 @@
 
       if (target) { form.attr('target', target); }
 
+      
+      //Handles data-ajax method
+      var ajax = link.data('ajax');
+      if (ajax !== undefined) {
+        form.attr('data-ajax', ajax);
+      }
+
       form.hide().append(metadata_input).appendTo('body');
       form.submit();
     },
